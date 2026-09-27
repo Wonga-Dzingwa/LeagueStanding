@@ -36,6 +36,8 @@ Target run: English First Division 1974/75, gameweek 10 (SPAN BE coding test).
 - Generated tables go in `data/output/` and are committed (the submission must include them).
 - A bad CSV row stops the run: fail with the line number and the reason, and never skip it.
 - Exit codes: `0` for ok, `1` for bad input data, `2` for bad arguments (argparse's default).
+  A missing or unreadable input file, or an unwritable output path, counts as a bad argument (2).
+- Run with `python -m league [INPUT|-] [-o PATH] [--as-at YYYY-MM-DD]`.
 - Errors go to stderr only; stdout carries nothing but the CSV table.
 
 ## Cross-platform (developed on Windows, run on macOS)

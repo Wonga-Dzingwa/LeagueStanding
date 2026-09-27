@@ -91,13 +91,18 @@ def _parse_row(row: list[str], line_no: int) -> Match:
     )
 
 
-def _parse_date(text: str, line_no: int) -> datetime.date:
+def parse_iso_date(text: str) -> datetime.date:
+    """Strict YYYY-MM-DD (fromisoformat alone also accepts forms like 19740817)."""
     if _ISO_DATE.fullmatch(text):
-        try:
-            return datetime.date.fromisoformat(text)
-        except ValueError:
-            pass
-    raise InputDataError(line_no, f"date {text!r} is not a valid YYYY-MM-DD date")
+        return datetime.date.fromisoformat(text)
+    raise ValueError(f"{text!r} is not in YYYY-MM-DD form")
+
+
+def _parse_date(text: str, line_no: int) -> datetime.date:
+    try:
+        return parse_iso_date(text)
+    except ValueError:
+        raise InputDataError(line_no, f"date {text!r} is not a valid YYYY-MM-DD date") from None
 
 
 def _parse_goals(column: str, text: str, line_no: int) -> int:
