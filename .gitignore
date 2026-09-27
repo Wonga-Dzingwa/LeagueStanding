@@ -27,3 +27,7 @@ Thumbs.db
 # Required for submission; never ignore
 !.claude/
 !ai/
+
+# Machine-specific Claude config (kept after the negations above so it stays ignored)
+CLAUDE.local.md
+.claude/settings.local.json

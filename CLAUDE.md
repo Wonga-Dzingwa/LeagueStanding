@@ -15,6 +15,8 @@ Target run: English First Division 1974/75, gameweek 10 (SPAN BE coding test).
 - Use goal average, never goal difference (goal difference started in 1976/77).
 - If goals against is 0, goal average counts as higher than any real ratio (∞).
   If goals for and against are both 0, it counts as 1.0.
+- Compare goal average exactly with `fractions.Fraction`, never floats. Handle ∞ in the
+  sort key, e.g. a `(is_infinite, Fraction)` tuple.
 
 ## Data
 - Source: engsoccerdata (James P. Curley, DOI 10.5281/zenodo.13158), free for non-commercial use with a citation.
@@ -29,6 +31,12 @@ Target run: English First Division 1974/75, gameweek 10 (SPAN BE coding test).
 - Read a file path or stdin; write a CSV table to a file path or stdout.
 - Filter by date with `--as-at YYYY-MM-DD`.
 - Output columns: `Pos,Team,P,W,D,L,GF,GA,GAvg,Pts`.
+- Show GAvg to 3 decimal places (e.g. `1.367`), and `-` when GA is 0. This is display only;
+  ranking uses the exact value.
+- Generated tables go in `data/output/` and are committed (the submission must include them).
+- A bad CSV row stops the run: fail with the line number and the reason, and never skip it.
+- Exit codes: `0` for ok, `1` for bad input data, `2` for bad arguments (argparse's default).
+- Errors go to stderr only; stdout carries nothing but the CSV table.
 
 ## Cross-platform (developed on Windows, run on macOS)
 - Use `pathlib` for paths; never hard-code `\` or drive letters.

@@ -1,0 +1,10 @@
+[project]
+name = "league"
+version = "0.1.0"
+description = "Football league standings from CSV match results (English First Division 1974/75 rules)"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
