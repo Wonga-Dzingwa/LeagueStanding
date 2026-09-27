@@ -1,0 +1,463 @@
+date,home_team,home_goals,away_team,away_goals
+1974-08-17,Birmingham City,0,Middlesbrough,3
+1974-08-17,Burnley,1,Wolverhampton Wanderers,2
+1974-08-17,Chelsea,0,Carlisle United,2
+1974-08-17,Everton,0,Derby County,0
+1974-08-17,Leicester City,0,Arsenal,1
+1974-08-17,Luton Town,1,Liverpool,2
+1974-08-17,Manchester City,4,West Ham United,0
+1974-08-17,Newcastle United,3,Coventry City,2
+1974-08-17,Sheffield United,1,Queens Park Rangers,1
+1974-08-17,Stoke City,3,Leeds United,0
+1974-08-17,Tottenham Hotspur,0,Ipswich Town,1
+1974-08-19,West Ham United,2,Luton Town,0
+1974-08-20,Arsenal,0,Ipswich Town,1
+1974-08-20,Birmingham City,3,Leicester City,4
+1974-08-20,Everton,2,Stoke City,1
+1974-08-20,Middlesbrough,0,Carlisle United,2
+1974-08-20,Wolverhampton Wanderers,0,Liverpool,0
+1974-08-21,Chelsea,3,Burnley,3
+1974-08-21,Derby County,1,Coventry City,1
+1974-08-21,Leeds United,0,Queens Park Rangers,1
+1974-08-21,Manchester City,1,Tottenham Hotspur,0
+1974-08-21,Newcastle United,2,Sheffield United,2
+1974-08-24,Arsenal,4,Manchester City,0
+1974-08-24,Carlisle United,1,Tottenham Hotspur,0
+1974-08-24,Coventry City,1,Chelsea,3
+1974-08-24,Derby County,2,Sheffield United,0
+1974-08-24,Ipswich Town,2,Burnley,0
+1974-08-24,Leeds United,1,Birmingham City,0
+1974-08-24,Liverpool,2,Leicester City,1
+1974-08-24,Middlesbrough,1,Luton Town,1
+1974-08-24,Queens Park Rangers,0,Stoke City,1
+1974-08-24,West Ham United,2,Everton,3
+1974-08-24,Wolverhampton Wanderers,4,Newcastle United,2
+1974-08-27,Burnley,1,Chelsea,2
+1974-08-27,Carlisle United,0,Middlesbrough,1
+1974-08-27,Coventry City,1,Derby County,1
+1974-08-27,Ipswich Town,3,Arsenal,0
+1974-08-27,Liverpool,2,Wolverhampton Wanderers,0
+1974-08-27,Queens Park Rangers,1,Leeds United,1
+1974-08-27,Sheffield United,2,Newcastle United,1
+1974-08-28,Leicester City,1,Birmingham City,1
+1974-08-28,Luton Town,0,West Ham United,0
+1974-08-28,Stoke City,1,Everton,1
+1974-08-28,Tottenham Hotspur,1,Manchester City,2
+1974-08-31,Birmingham City,1,Wolverhampton Wanderers,1
+1974-08-31,Burnley,3,Coventry City,0
+1974-08-31,Chelsea,0,Liverpool,3
+1974-08-31,Everton,2,Arsenal,1
+1974-08-31,Leicester City,1,Carlisle United,1
+1974-08-31,Luton Town,1,Queens Park Rangers,1
+1974-08-31,Manchester City,2,Leeds United,1
+1974-08-31,Newcastle United,2,West Ham United,0
+1974-08-31,Sheffield United,3,Ipswich Town,1
+1974-08-31,Stoke City,1,Middlesbrough,1
+1974-08-31,Tottenham Hotspur,2,Derby County,0
+1974-09-07,Arsenal,0,Burnley,1
+1974-09-07,Carlisle United,0,Stoke City,2
+1974-09-07,Coventry City,2,Manchester City,2
+1974-09-07,Derby County,2,Newcastle United,2
+1974-09-07,Ipswich Town,1,Everton,0
+1974-09-07,Leeds United,1,Luton Town,1
+1974-09-07,Liverpool,5,Tottenham Hotspur,2
+1974-09-07,Middlesbrough,1,Chelsea,1
+1974-09-07,Queens Park Rangers,0,Birmingham City,1
+1974-09-07,West Ham United,1,Sheffield United,2
+1974-09-07,Wolverhampton Wanderers,1,Leicester City,1
+1974-09-14,Birmingham City,3,Derby County,2
+1974-09-14,Burnley,2,Leeds United,1
+1974-09-14,Chelsea,0,Arsenal,0
+1974-09-14,Everton,0,Wolverhampton Wanderers,0
+1974-09-14,Leicester City,3,Queens Park Rangers,1
+1974-09-14,Luton Town,1,Ipswich Town,4
+1974-09-14,Manchester City,2,Liverpool,0
+1974-09-14,Newcastle United,1,Carlisle United,0
+1974-09-14,Sheffield United,1,Middlesbrough,0
+1974-09-14,Stoke City,2,Coventry City,0
+1974-09-14,Tottenham Hotspur,2,West Ham United,1
+1974-09-21,Arsenal,2,Luton Town,2
+1974-09-21,Carlisle United,1,Birmingham City,0
+1974-09-21,Coventry City,1,Everton,1
+1974-09-21,Derby County,3,Burnley,2
+1974-09-21,Ipswich Town,2,Chelsea,0
+1974-09-21,Leeds United,5,Sheffield United,1
+1974-09-21,Liverpool,3,Stoke City,0
+1974-09-21,Middlesbrough,3,Manchester City,0
+1974-09-21,Queens Park Rangers,1,Newcastle United,2
+1974-09-21,West Ham United,6,Leicester City,2
+1974-09-21,Wolverhampton Wanderers,2,Tottenham Hotspur,3
+1974-09-24,Carlisle United,0,Manchester City,0
+1974-09-24,Coventry City,2,Luton Town,1
+1974-09-24,Ipswich Town,3,Stoke City,1
+1974-09-24,Liverpool,0,Burnley,1
+1974-09-24,Queens Park Rangers,2,Everton,2
+1974-09-24,Wolverhampton Wanderers,1,Sheffield United,1
+1974-09-25,Derby County,4,Chelsea,1
+1974-09-25,West Ham United,3,Birmingham City,0
+1974-09-28,Birmingham City,3,Arsenal,1
+1974-09-28,Burnley,3,West Ham United,5
+1974-09-28,Chelsea,0,Wolverhampton Wanderers,1
+1974-09-28,Everton,3,Leeds United,2
+1974-09-28,Leicester City,0,Coventry City,1
+1974-09-28,Luton Town,3,Carlisle United,1
+1974-09-28,Manchester City,1,Queens Park Rangers,0
+1974-09-28,Newcastle United,1,Ipswich Town,0
+1974-09-28,Sheffield United,1,Liverpool,0
+1974-09-28,Stoke City,1,Derby County,1
+1974-09-28,Tottenham Hotspur,1,Middlesbrough,2
+1974-10-05,Birmingham City,1,Coventry City,2
+1974-10-05,Carlisle United,0,Liverpool,1
+1974-10-05,Everton,1,Newcastle United,1
+1974-10-05,Leeds United,2,Arsenal,0
+1974-10-05,Leicester City,0,Luton Town,0
+1974-10-05,Manchester City,1,Chelsea,1
+1974-10-05,Middlesbrough,2,Wolverhampton Wanderers,1
+1974-10-05,Queens Park Rangers,1,Ipswich Town,0
+1974-10-05,Stoke City,3,Sheffield United,2
+1974-10-05,Tottenham Hotspur,2,Burnley,3
+1974-10-05,West Ham United,2,Derby County,2
+1974-10-12,Arsenal,2,Queens Park Rangers,2
+1974-10-12,Burnley,2,Manchester City,1
+1974-10-12,Chelsea,1,Tottenham Hotspur,0
+1974-10-12,Coventry City,1,West Ham United,1
+1974-10-12,Derby County,1,Leicester City,0
+1974-10-12,Ipswich Town,0,Leeds United,0
+1974-10-12,Liverpool,2,Middlesbrough,0
+1974-10-12,Luton Town,1,Birmingham City,3
+1974-10-12,Newcastle United,2,Stoke City,2
+1974-10-12,Sheffield United,2,Everton,2
+1974-10-12,Wolverhampton Wanderers,2,Carlisle United,0
+1974-10-15,Birmingham City,1,Leeds United,0
+1974-10-15,Burnley,1,Ipswich Town,0
+1974-10-15,Everton,1,West Ham United,1
+1974-10-15,Sheffield United,1,Derby County,2
+1974-10-16,Luton Town,0,Middlesbrough,1
+1974-10-16,Manchester City,2,Arsenal,1
+1974-10-16,Newcastle United,0,Wolverhampton Wanderers,0
+1974-10-16,Tottenham Hotspur,1,Carlisle United,1
+1974-10-19,Birmingham City,3,Newcastle United,0
+1974-10-19,Carlisle United,3,Derby County,0
+1974-10-19,Everton,1,Chelsea,1
+1974-10-19,Leeds United,2,Wolverhampton Wanderers,0
+1974-10-19,Leicester City,3,Sheffield United,0
+1974-10-19,Manchester City,1,Luton Town,0
+1974-10-19,Middlesbrough,4,Coventry City,4
+1974-10-19,Queens Park Rangers,0,Liverpool,1
+1974-10-19,Stoke City,2,Burnley,0
+1974-10-19,Tottenham Hotspur,2,Arsenal,0
+1974-10-19,West Ham United,1,Ipswich Town,0
+1974-10-26,Arsenal,3,West Ham United,0
+1974-10-26,Burnley,1,Everton,1
+1974-10-26,Chelsea,3,Stoke City,3
+1974-10-26,Coventry City,2,Carlisle United,1
+1974-10-26,Derby County,2,Middlesbrough,3
+1974-10-26,Ipswich Town,1,Manchester City,1
+1974-10-26,Liverpool,1,Leeds United,0
+1974-10-26,Luton Town,1,Tottenham Hotspur,1
+1974-10-26,Newcastle United,0,Leicester City,1
+1974-10-26,Sheffield United,3,Birmingham City,2
+1974-10-26,Wolverhampton Wanderers,1,Queens Park Rangers,2
+1974-11-02,Arsenal,0,Wolverhampton Wanderers,0
+1974-11-02,Birmingham City,2,Chelsea,0
+1974-11-02,Everton,2,Manchester City,0
+1974-11-02,Ipswich Town,1,Liverpool,0
+1974-11-02,Leeds United,0,Derby County,1
+1974-11-02,Leicester City,1,Burnley,0
+1974-11-02,Newcastle United,1,Luton Town,0
+1974-11-02,Queens Park Rangers,2,Coventry City,0
+1974-11-02,Sheffield United,2,Carlisle United,1
+1974-11-02,Stoke City,2,Tottenham Hotspur,2
+1974-11-02,West Ham United,3,Middlesbrough,0
+1974-11-09,Burnley,2,Birmingham City,2
+1974-11-09,Carlisle United,0,West Ham United,1
+1974-11-09,Chelsea,0,Leicester City,0
+1974-11-09,Coventry City,1,Leeds United,3
+1974-11-09,Derby County,5,Queens Park Rangers,2
+1974-11-09,Liverpool,1,Arsenal,3
+1974-11-09,Luton Town,0,Sheffield United,1
+1974-11-09,Manchester City,1,Stoke City,0
+1974-11-09,Middlesbrough,0,Newcastle United,0
+1974-11-09,Tottenham Hotspur,1,Everton,1
+1974-11-09,Wolverhampton Wanderers,2,Ipswich Town,1
+1974-11-13,Chelsea,3,Coventry City,3
+1974-11-16,Arsenal,3,Derby County,1
+1974-11-16,Birmingham City,4,Manchester City,0
+1974-11-16,Everton,0,Liverpool,0
+1974-11-16,Ipswich Town,4,Coventry City,0
+1974-11-16,Leeds United,2,Middlesbrough,2
+1974-11-16,Leicester City,1,Tottenham Hotspur,2
+1974-11-16,Newcastle United,5,Chelsea,0
+1974-11-16,Queens Park Rangers,2,Carlisle United,1
+1974-11-16,Sheffield United,2,Burnley,2
+1974-11-16,Stoke City,4,Luton Town,2
+1974-11-16,West Ham United,5,Wolverhampton Wanderers,2
+1974-11-23,Burnley,4,Newcastle United,1
+1974-11-23,Carlisle United,1,Leeds United,2
+1974-11-23,Coventry City,3,Arsenal,0
+1974-11-23,Derby County,2,Ipswich Town,0
+1974-11-23,Liverpool,1,West Ham United,1
+1974-11-23,Manchester City,4,Leicester City,1
+1974-11-23,Middlesbrough,1,Queens Park Rangers,3
+1974-11-23,Tottenham Hotspur,0,Birmingham City,0
+1974-11-23,Wolverhampton Wanderers,2,Stoke City,2
+1974-11-27,Stoke City,1,Queens Park Rangers,0
+1974-11-30,Arsenal,2,Middlesbrough,0
+1974-11-30,Coventry City,1,Liverpool,1
+1974-11-30,Everton,4,Birmingham City,1
+1974-11-30,Ipswich Town,3,Carlisle United,1
+1974-11-30,Leeds United,2,Chelsea,0
+1974-11-30,Luton Town,2,Burnley,3
+1974-11-30,Newcastle United,2,Manchester City,1
+1974-11-30,Queens Park Rangers,0,West Ham United,2
+1974-11-30,Sheffield United,0,Tottenham Hotspur,1
+1974-11-30,Stoke City,1,Leicester City,0
+1974-12-04,Leeds United,2,Tottenham Hotspur,1
+1974-12-07,Birmingham City,0,Stoke City,3
+1974-12-07,Burnley,3,Queens Park Rangers,0
+1974-12-07,Carlisle United,2,Arsenal,1
+1974-12-07,Chelsea,2,Luton Town,0
+1974-12-07,Leicester City,0,Everton,2
+1974-12-07,Liverpool,2,Derby County,2
+1974-12-07,Manchester City,3,Sheffield United,2
+1974-12-07,Middlesbrough,3,Ipswich Town,0
+1974-12-07,Tottenham Hotspur,3,Newcastle United,0
+1974-12-07,West Ham United,2,Leeds United,1
+1974-12-07,Wolverhampton Wanderers,2,Coventry City,0
+1974-12-10,Middlesbrough,3,Leicester City,0
+1974-12-14,Arsenal,0,Leicester City,0
+1974-12-14,Carlisle United,1,Chelsea,2
+1974-12-14,Coventry City,2,Newcastle United,0
+1974-12-14,Derby County,0,Everton,1
+1974-12-14,Ipswich Town,4,Tottenham Hotspur,0
+1974-12-14,Leeds United,3,Stoke City,1
+1974-12-14,Liverpool,2,Luton Town,0
+1974-12-14,Middlesbrough,3,Birmingham City,0
+1974-12-14,Queens Park Rangers,1,Sheffield United,0
+1974-12-14,West Ham United,0,Manchester City,0
+1974-12-14,Wolverhampton Wanderers,4,Burnley,2
+1974-12-20,Leicester City,0,Ipswich Town,1
+1974-12-20,Sheffield United,1,Coventry City,0
+1974-12-21,Birmingham City,3,Liverpool,1
+1974-12-21,Burnley,1,Middlesbrough,1
+1974-12-21,Chelsea,1,West Ham United,1
+1974-12-21,Everton,2,Carlisle United,3
+1974-12-21,Luton Town,1,Derby County,0
+1974-12-21,Manchester City,0,Wolverhampton Wanderers,0
+1974-12-21,Newcastle United,3,Leeds United,0
+1974-12-21,Stoke City,0,Arsenal,2
+1974-12-21,Tottenham Hotspur,1,Queens Park Rangers,2
+1974-12-26,Arsenal,1,Chelsea,2
+1974-12-26,Carlisle United,1,Newcastle United,2
+1974-12-26,Coventry City,2,Stoke City,0
+1974-12-26,Derby County,2,Birmingham City,1
+1974-12-26,Ipswich Town,0,Luton Town,1
+1974-12-26,Leeds United,2,Burnley,2
+1974-12-26,Liverpool,4,Manchester City,1
+1974-12-26,Middlesbrough,1,Sheffield United,0
+1974-12-26,Queens Park Rangers,4,Leicester City,2
+1974-12-26,West Ham United,1,Tottenham Hotspur,1
+1974-12-26,Wolverhampton Wanderers,2,Everton,0
+1974-12-28,Birmingham City,0,Ipswich Town,1
+1974-12-28,Burnley,2,Carlisle United,1
+1974-12-28,Chelsea,0,Queens Park Rangers,3
+1974-12-28,Everton,1,Middlesbrough,1
+1974-12-28,Leicester City,0,Leeds United,2
+1974-12-28,Luton Town,3,Wolverhampton Wanderers,2
+1974-12-28,Manchester City,1,Derby County,2
+1974-12-28,Sheffield United,1,Arsenal,1
+1974-12-28,Stoke City,2,West Ham United,1
+1974-12-28,Tottenham Hotspur,1,Coventry City,1
+1975-01-11,Arsenal,2,Carlisle United,1
+1975-01-11,Coventry City,2,Wolverhampton Wanderers,1
+1975-01-11,Derby County,2,Liverpool,0
+1975-01-11,Everton,3,Leicester City,0
+1975-01-11,Ipswich Town,2,Middlesbrough,0
+1975-01-11,Leeds United,2,West Ham United,1
+1975-01-11,Luton Town,1,Chelsea,1
+1975-01-11,Newcastle United,2,Tottenham Hotspur,5
+1975-01-11,Queens Park Rangers,0,Burnley,1
+1975-01-11,Sheffield United,1,Manchester City,1
+1975-01-11,Stoke City,0,Birmingham City,0
+1975-01-18,Birmingham City,0,Everton,3
+1975-01-18,Burnley,1,Luton Town,0
+1975-01-18,Carlisle United,2,Ipswich Town,1
+1975-01-18,Chelsea,0,Leeds United,2
+1975-01-18,Leicester City,1,Stoke City,1
+1975-01-18,Liverpool,2,Coventry City,1
+1975-01-18,Manchester City,5,Newcastle United,1
+1975-01-18,Middlesbrough,0,Arsenal,0
+1975-01-18,Tottenham Hotspur,1,Sheffield United,3
+1975-01-18,West Ham United,2,Queens Park Rangers,2
+1975-01-18,Wolverhampton Wanderers,0,Derby County,1
+1975-02-01,Arsenal,2,Liverpool,0
+1975-02-01,Birmingham City,1,Burnley,1
+1975-02-01,Everton,1,Tottenham Hotspur,0
+1975-02-01,Ipswich Town,2,Wolverhampton Wanderers,0
+1975-02-01,Leeds United,0,Coventry City,0
+1975-02-01,Leicester City,1,Chelsea,1
+1975-02-01,Newcastle United,2,Middlesbrough,1
+1975-02-01,Queens Park Rangers,4,Derby County,1
+1975-02-01,Sheffield United,1,Luton Town,1
+1975-02-01,Stoke City,4,Manchester City,0
+1975-02-01,West Ham United,2,Carlisle United,0
+1975-02-08,Burnley,2,Leicester City,0
+1975-02-08,Carlisle United,0,Sheffield United,1
+1975-02-08,Chelsea,2,Birmingham City,1
+1975-02-08,Coventry City,1,Queens Park Rangers,1
+1975-02-08,Derby County,0,Leeds United,0
+1975-02-08,Liverpool,5,Ipswich Town,2
+1975-02-08,Luton Town,1,Newcastle United,0
+1975-02-08,Manchester City,2,Everton,1
+1975-02-08,Middlesbrough,0,West Ham United,0
+1975-02-08,Tottenham Hotspur,0,Stoke City,2
+1975-02-08,Wolverhampton Wanderers,1,Arsenal,0
+1975-02-12,Newcastle United,4,Liverpool,1
+1975-02-15,Coventry City,1,Tottenham Hotspur,1
+1975-02-15,Newcastle United,3,Burnley,0
+1975-02-15,Sheffield United,2,Chelsea,1
+1975-02-15,Stoke City,2,Wolverhampton Wanderers,2
+1975-02-18,Birmingham City,1,Tottenham Hotspur,0
+1975-02-19,West Ham United,0,Liverpool,0
+1975-02-22,Burnley,2,Sheffield United,1
+1975-02-22,Carlisle United,1,Queens Park Rangers,2
+1975-02-22,Chelsea,3,Newcastle United,2
+1975-02-22,Coventry City,3,Ipswich Town,1
+1975-02-22,Derby County,2,Arsenal,1
+1975-02-22,Liverpool,0,Everton,0
+1975-02-22,Luton Town,0,Stoke City,0
+1975-02-22,Manchester City,3,Birmingham City,1
+1975-02-22,Middlesbrough,0,Leeds United,1
+1975-02-22,Tottenham Hotspur,0,Leicester City,3
+1975-02-22,Wolverhampton Wanderers,3,West Ham United,1
+1975-02-25,Everton,3,Luton Town,1
+1975-02-25,Ipswich Town,3,Derby County,0
+1975-02-25,Leeds United,3,Carlisle United,1
+1975-02-25,Queens Park Rangers,0,Middlesbrough,0
+1975-02-28,West Ham United,0,Newcastle United,1
+1975-03-01,Arsenal,0,Everton,2
+1975-03-01,Carlisle United,0,Leicester City,1
+1975-03-01,Coventry City,0,Burnley,3
+1975-03-01,Derby County,3,Tottenham Hotspur,1
+1975-03-01,Ipswich Town,0,Sheffield United,1
+1975-03-01,Leeds United,2,Manchester City,2
+1975-03-01,Liverpool,2,Chelsea,2
+1975-03-01,Middlesbrough,2,Stoke City,0
+1975-03-01,Queens Park Rangers,2,Luton Town,1
+1975-03-01,Wolverhampton Wanderers,0,Birmingham City,1
+1975-03-08,Burnley,1,Liverpool,1
+1975-03-08,Chelsea,1,Derby County,2
+1975-03-08,Everton,2,Queens Park Rangers,1
+1975-03-08,Leicester City,1,Manchester City,0
+1975-03-08,Luton Town,1,Coventry City,3
+1975-03-08,Sheffield United,1,Wolverhampton Wanderers,0
+1975-03-15,Arsenal,1,Birmingham City,1
+1975-03-15,Carlisle United,1,Luton Town,2
+1975-03-15,Coventry City,2,Leicester City,2
+1975-03-15,Derby County,1,Stoke City,2
+1975-03-15,Ipswich Town,5,Newcastle United,4
+1975-03-15,Leeds United,0,Everton,0
+1975-03-15,Liverpool,0,Sheffield United,0
+1975-03-15,Middlesbrough,3,Tottenham Hotspur,0
+1975-03-15,Queens Park Rangers,2,Manchester City,0
+1975-03-15,West Ham United,2,Burnley,1
+1975-03-15,Wolverhampton Wanderers,7,Chelsea,1
+1975-03-18,Arsenal,3,Newcastle United,0
+1975-03-18,Birmingham City,1,West Ham United,1
+1975-03-18,Middlesbrough,2,Everton,0
+1975-03-18,Queens Park Rangers,1,Chelsea,0
+1975-03-18,Stoke City,1,Ipswich Town,2
+1975-03-19,Leicester City,1,Liverpool,1
+1975-03-19,Manchester City,1,Carlisle United,2
+1975-03-22,Birmingham City,4,Queens Park Rangers,1
+1975-03-22,Burnley,3,Arsenal,3
+1975-03-22,Chelsea,1,Middlesbrough,2
+1975-03-22,Everton,1,Ipswich Town,1
+1975-03-22,Leicester City,3,Wolverhampton Wanderers,2
+1975-03-22,Luton Town,2,Leeds United,1
+1975-03-22,Manchester City,1,Coventry City,0
+1975-03-22,Newcastle United,0,Derby County,2
+1975-03-22,Sheffield United,3,West Ham United,2
+1975-03-22,Stoke City,5,Carlisle United,2
+1975-03-22,Tottenham Hotspur,0,Liverpool,2
+1975-03-25,Birmingham City,2,Carlisle United,0
+1975-03-25,Liverpool,4,Newcastle United,0
+1975-03-25,Luton Town,2,Arsenal,0
+1975-03-28,Coventry City,2,Sheffield United,2
+1975-03-28,Manchester City,2,Middlesbrough,1
+1975-03-28,Tottenham Hotspur,3,Wolverhampton Wanderers,0
+1975-03-28,West Ham United,2,Stoke City,2
+1975-03-29,Arsenal,1,Stoke City,1
+1975-03-29,Carlisle United,3,Everton,0
+1975-03-29,Derby County,5,Luton Town,0
+1975-03-29,Ipswich Town,2,Leicester City,1
+1975-03-29,Leeds United,1,Newcastle United,1
+1975-03-29,Liverpool,1,Birmingham City,0
+1975-03-29,Middlesbrough,2,Burnley,0
+1975-03-29,Queens Park Rangers,0,Tottenham Hotspur,1
+1975-03-29,West Ham United,0,Chelsea,1
+1975-03-29,Wolverhampton Wanderers,1,Manchester City,0
+1975-03-31,Arsenal,1,Sheffield United,0
+1975-03-31,Burnley,2,Derby County,5
+1975-03-31,Chelsea,0,Ipswich Town,0
+1975-03-31,Everton,1,Coventry City,0
+1975-03-31,Leeds United,2,Leicester City,2
+1975-03-31,Newcastle United,2,Queens Park Rangers,2
+1975-03-31,Stoke City,2,Liverpool,0
+1975-03-31,Wolverhampton Wanderers,5,Luton Town,2
+1975-04-01,Carlisle United,4,Burnley,2
+1975-04-01,Derby County,2,Manchester City,1
+1975-04-01,Ipswich Town,3,Birmingham City,2
+1975-04-01,Leicester City,3,West Ham United,0
+1975-04-01,Sheffield United,1,Leeds United,1
+1975-04-04,Everton,1,Burnley,1
+1975-04-05,Carlisle United,0,Coventry City,0
+1975-04-05,Leeds United,0,Liverpool,2
+1975-04-05,Leicester City,4,Newcastle United,0
+1975-04-05,Middlesbrough,1,Derby County,1
+1975-04-05,Queens Park Rangers,2,Wolverhampton Wanderers,0
+1975-04-05,Stoke City,3,Chelsea,0
+1975-04-05,Tottenham Hotspur,2,Luton Town,1
+1975-04-08,Arsenal,2,Coventry City,0
+1975-04-09,Derby County,1,Wolverhampton Wanderers,0
+1975-04-09,Leicester City,1,Middlesbrough,0
+1975-04-09,Luton Town,2,Everton,1
+1975-04-12,Arsenal,1,Leeds United,2
+1975-04-12,Burnley,3,Tottenham Hotspur,2
+1975-04-12,Chelsea,0,Manchester City,1
+1975-04-12,Coventry City,1,Birmingham City,0
+1975-04-12,Derby County,1,West Ham United,0
+1975-04-12,Ipswich Town,2,Queens Park Rangers,1
+1975-04-12,Liverpool,2,Carlisle United,0
+1975-04-12,Luton Town,3,Leicester City,0
+1975-04-12,Newcastle United,0,Everton,1
+1975-04-12,Sheffield United,2,Stoke City,0
+1975-04-12,Wolverhampton Wanderers,2,Middlesbrough,0
+1975-04-19,Birmingham City,1,Luton Town,4
+1975-04-19,Carlisle United,1,Wolverhampton Wanderers,0
+1975-04-19,Everton,2,Sheffield United,3
+1975-04-19,Leeds United,2,Ipswich Town,1
+1975-04-19,Leicester City,0,Derby County,0
+1975-04-19,Manchester City,2,Burnley,0
+1975-04-19,Middlesbrough,1,Liverpool,0
+1975-04-19,Queens Park Rangers,0,Arsenal,0
+1975-04-19,Stoke City,0,Newcastle United,0
+1975-04-19,Tottenham Hotspur,2,Chelsea,0
+1975-04-19,West Ham United,1,Coventry City,2
+1975-04-23,Chelsea,1,Sheffield United,1
+1975-04-23,Manchester City,1,Ipswich Town,1
+1975-04-23,Newcastle United,3,Arsenal,1
+1975-04-26,Arsenal,1,Tottenham Hotspur,0
+1975-04-26,Burnley,0,Stoke City,0
+1975-04-26,Chelsea,1,Everton,1
+1975-04-26,Coventry City,0,Middlesbrough,2
+1975-04-26,Derby County,0,Carlisle United,0
+1975-04-26,Ipswich Town,4,West Ham United,1
+1975-04-26,Liverpool,3,Queens Park Rangers,1
+1975-04-26,Luton Town,1,Manchester City,1
+1975-04-26,Newcastle United,1,Birmingham City,2
+1975-04-26,Sheffield United,4,Leicester City,0
+1975-04-26,Wolverhampton Wanderers,1,Leeds United,1
+1975-04-28,Tottenham Hotspur,4,Leeds United,2
+1975-04-28,West Ham United,1,Arsenal,0
+1975-04-29,Birmingham City,0,Sheffield United,0
