@@ -1,7 +1,7 @@
 """Command-line entry point.
 
-Exit codes: 0 ok, 1 bad input data, 2 bad arguments (including an unreadable input file).
-Errors go to stderr; stdout carries only the CSV table.
+Exit codes: 0 ok, 1 bad input data, 2 bad arguments (including an unreadable input file),
+3 unexpected internal error. Errors go to stderr; stdout carries only the CSV table.
 """
 
 from __future__ import annotations
@@ -11,15 +11,16 @@ import datetime
 import io
 import sys
 from pathlib import Path
-from typing import Sequence, TextIO
+from typing import BinaryIO, Sequence, TextIO
 
-from league.reader import InputDataError, parse_iso_date, read_matches
-from league.standings import league_table
+from league.reader import InputDataError, parse_iso_date, read_matches_bytes
+from league.standings import filter_as_at, league_table
 from league.writer import write_table
 
 EXIT_OK = 0
 EXIT_BAD_DATA = 1
 EXIT_BAD_ARGS = 2
+EXIT_INTERNAL = 3
 
 
 class _ParserExit(Exception):
@@ -67,7 +68,7 @@ def build_parser(out: TextIO, err: TextIO) -> argparse.ArgumentParser:
     parser.add_argument(
         "input",
         nargs="?",
-        default="-",
+        default=None,
         help="results CSV (date,home_team,home_goals,away_team,away_goals); '-' or omitted reads stdin",
     )
     parser.add_argument(
@@ -86,26 +87,50 @@ def build_parser(out: TextIO, err: TextIO) -> argparse.ArgumentParser:
 
 def main(
     argv: Sequence[str] | None = None,
-    stdin: TextIO | None = None,
+    stdin: BinaryIO | None = None,
     stdout: TextIO | None = None,
     stderr: TextIO | None = None,
 ) -> int:
     err = stderr if stderr is not None else sys.stderr
     out = stdout if stdout is not None else sys.stdout
 
+    parser = build_parser(out, err)
     try:
-        args = build_parser(out, err).parse_args(argv)
+        args = parser.parse_args(argv)
     except _ParserExit as exc:
         return exc.status
 
     try:
-        if args.input == "-":
+        return _run(args, parser, stdin, stdout, err)
+    except Exception as exc:  # anything not handled above is a bug, not bad input
+        err.write(f"league: internal error: {type(exc).__name__}: {exc}\n")
+        return EXIT_INTERNAL
+
+
+def _run(
+    args: argparse.Namespace,
+    parser: argparse.ArgumentParser,
+    stdin: BinaryIO | None,
+    stdout: TextIO | None,
+    err: TextIO,
+) -> int:
+    if args.input in (None, "-"):
+        stream = stdin if stdin is not None else getattr(sys.stdin, "buffer", None)
+        # No input named and nothing piped in: don't sit waiting for keyboard input.
+        # An explicit "-" still reads from a terminal, as Unix tools do.
+        if stream is None or (args.input is None and stream.isatty()):
+            err.write(parser.format_usage())
+            err.write("league: error: no input: give a results CSV file, or pipe one in on stdin\n")
+            return EXIT_BAD_ARGS
+
+    try:
+        if args.input in (None, "-"):
             source = "<stdin>"
-            matches = read_matches(stdin if stdin is not None else _binary_stdin())
+            data = stream.read()
         else:
             source = args.input
-            with Path(args.input).open(encoding="utf-8-sig", newline="") as f:
-                matches = read_matches(f)
+            data = Path(args.input).read_bytes()
+        matches = read_matches_bytes(data)
     except InputDataError as exc:
         err.write(f"league: error: {source}: {exc}\n")
         return EXIT_BAD_DATA
@@ -114,7 +139,13 @@ def main(
         return EXIT_BAD_ARGS
 
     table = io.StringIO(newline="")
-    write_table(league_table(matches, args.as_at), table)
+    kept = filter_as_at(matches, args.as_at)
+    if args.as_at is not None and not kept:
+        err.write(
+            f"league: warning: no matches on or before {args.as_at.isoformat()}; "
+            "the table is empty\n"
+        )
+    write_table(league_table(kept), table)
 
     if args.output:
         try:
@@ -128,11 +159,6 @@ def main(
     else:
         _write_stdout(table.getvalue(), stdout)
     return EXIT_OK
-
-
-def _binary_stdin() -> TextIO:
-    # Re-wrap so the csv module sees raw line endings and a BOM is tolerated.
-    return io.TextIOWrapper(sys.stdin.buffer, encoding="utf-8-sig", newline="")
 
 
 def _write_stdout(text: str, stdout: TextIO | None) -> None:

@@ -6,8 +6,10 @@ Expected header: date,home_team,home_goals,away_team,away_goals
 
 from __future__ import annotations
 
+import codecs
 import csv
 import datetime
+import io
 import re
 from typing import Iterable
 
@@ -28,15 +30,35 @@ class InputDataError(Exception):
         self.reason = reason
 
 
+def read_matches_bytes(data: bytes) -> list[Match]:
+    """Parse match results from raw bytes (a file's or stdin's full contents).
+
+    Decoding happens here, all at once, so a bad byte is reported on its real line.
+    (A text stream decodes in chunks, which reports the error lines too early.)
+    """
+    return read_matches(io.StringIO(decode_input(data), newline=""))
+
+
+def decode_input(data: bytes) -> str:
+    """Decode UTF-8 (an optional BOM is dropped); bad bytes raise with their line number."""
+    if data.startswith(codecs.BOM_UTF8):
+        data = data[len(codecs.BOM_UTF8):]
+    try:
+        return data.decode("utf-8")
+    except UnicodeDecodeError as exc:
+        line_no = data.count(b"\n", 0, exc.start) + 1
+        raise InputDataError(
+            line_no, f"not valid UTF-8 text (byte 0x{data[exc.start]:02x}); save the file as UTF-8"
+        ) from None
+
+
 def read_matches(stream: Iterable[str]) -> list[Match]:
-    """Parse match results from a text stream opened with newline=""."""
+    """Parse match results from an already-decoded text stream opened with newline=""."""
     reader = csv.reader(stream, strict=True)  # strict: unbalanced quotes are an error
     try:
         return _parse(reader)
     except csv.Error as exc:
         raise InputDataError(reader.line_num, f"malformed CSV: {exc}") from exc
-    except UnicodeDecodeError as exc:
-        raise InputDataError(reader.line_num + 1, "file is not valid UTF-8 text") from exc
 
 
 def _parse(reader) -> list[Match]:
@@ -53,9 +75,18 @@ def _parse(reader) -> list[Match]:
 
     matches: list[Match] = []
     seen: dict[tuple[str, str], int] = {}
+    spellings: dict[str, tuple[str, int]] = {}  # casefolded name -> (first spelling, its line)
     for row in reader:
         line_no = reader.line_num
         match = _parse_row(row, line_no)
+        for team in (match.home_team, match.away_team):
+            first, first_line = spellings.setdefault(team.casefold(), (team, line_no))
+            if team != first:
+                raise InputDataError(
+                    line_no,
+                    f"team {team!r} differs only in upper/lower case from {first!r} "
+                    f"(line {first_line}); use one spelling",
+                )
         fixture = (match.home_team, match.away_team)
         if fixture in seen:
             raise InputDataError(

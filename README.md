@@ -26,7 +26,7 @@ python3 -m league [INPUT | -] [-o PATH] [--as-at YYYY-MM-DD]
 
 | Argument | Meaning |
 |---|---|
-| `INPUT` | Results CSV. Omit it or pass `-` to read from stdin. |
+| `INPUT` | Results CSV. Omit it or pass `-` to read from stdin. If you omit it without piping anything in, the app prints usage and exits 2 instead of waiting. |
 | `-o PATH` | Write the table to `PATH` (parent folders are created). By default it is written to stdout. |
 | `--as-at DATE` | Only count matches played on or before `DATE`. |
 
@@ -55,8 +55,11 @@ cat data/results_1974_75_full.csv | python3 -m league > final_table.csv
 | `0` | Success. |
 | `1` | Bad input data. The first bad row stops the run, and stderr names the file, line number and reason. |
 | `2` | Bad arguments: an unknown option, an invalid `--as-at` date, an input file that can't be read, or an output path that can't be written. |
+| `3` | Unexpected internal error (a bug). A one-line message is printed instead of a traceback. |
 
 Errors only go to stderr. On any failure nothing is written to stdout and no output file is created.
+If `--as-at` is earlier than every match, a warning goes to stderr and the (header-only) table is
+still written, with exit code 0.
 
 ## Input format
 
@@ -76,6 +79,9 @@ A row is rejected if it has:
 - a date that isn't in `YYYY-MM-DD` form
 - a blank line
 - the same home-and-away fixture as an earlier row
+- a team name that differs only in upper/lower case from one used earlier (`Everton` / `everton`),
+  which would otherwise split one club into two
+- bytes that aren't valid UTF-8 (for example a file saved as Latin-1)
 
 Rows are never skipped silently. A UTF-8 BOM and CRLF line endings are accepted.
 

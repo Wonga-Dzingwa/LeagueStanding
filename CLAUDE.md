@@ -35,10 +35,15 @@ Target run: English First Division 1974/75, gameweek 10 (SPAN BE coding test).
   ranking uses the exact value.
 - Generated tables go in `data/output/` and are committed (the submission must include them).
 - A bad CSV row stops the run: fail with the line number and the reason, and never skip it.
+  Decode input as bytes in one go so an invalid UTF-8 byte is reported on its real line.
+- Team names that differ only in upper/lower case (`Everton` / `everton`) are bad data (exit 1).
 - Exit codes: `0` for ok, `1` for bad input data, `2` for bad arguments (argparse's default).
   A missing or unreadable input file, or an unwritable output path, counts as a bad argument (2).
+  `3` for an unexpected internal error (a bug): one line on stderr, no traceback, no output.
 - Run with `python -m league [INPUT|-] [-o PATH] [--as-at YYYY-MM-DD]`.
-- Errors go to stderr only; stdout carries nothing but the CSV table.
+- No INPUT and stdin is a terminal: print usage and exit 2, never wait. An explicit `-` still reads stdin.
+- Errors and warnings go to stderr only; stdout carries nothing but the CSV table.
+- If `--as-at` leaves no matches, warn on stderr but still exit 0 (the header-only table is valid).
 
 ## Cross-platform (developed on Windows, run on macOS)
 - Use `pathlib` for paths; never hard-code `\` or drive letters.

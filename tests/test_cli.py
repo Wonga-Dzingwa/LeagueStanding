@@ -5,7 +5,8 @@ from pathlib import Path
 
 import pytest
 
-from league.cli import EXIT_BAD_ARGS, EXIT_BAD_DATA, EXIT_OK, main
+from league import cli
+from league.cli import EXIT_BAD_ARGS, EXIT_BAD_DATA, EXIT_INTERNAL, EXIT_OK, main
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -26,7 +27,7 @@ TABLE_ALL = (
 
 def run(argv, stdin_text=""):
     out, err = io.StringIO(), io.StringIO()
-    code = main(argv, stdin=io.StringIO(stdin_text, newline=""), stdout=out, stderr=err)
+    code = main(argv, stdin=io.BytesIO(stdin_text.encode("utf-8")), stdout=out, stderr=err)
     return code, out.getvalue(), err.getvalue()
 
 
@@ -67,6 +68,23 @@ def test_as_at_filters_matches(results_file):
         "3,Stoke City,1,0,1,0,1,1,1.000,1",
         "4,Ipswich Town,1,0,0,1,0,1,0.000,0",
     ]
+
+
+def test_as_at_before_any_match_warns_but_exits_0(results_file):
+    code, out, err = run([str(results_file), "--as-at", "1974-01-01"])
+    assert code == EXIT_OK
+    assert out == "Pos,Team,P,W,D,L,GF,GA,GAvg,Pts\n"
+    assert err == "league: warning: no matches on or before 1974-01-01; the table is empty\n"
+
+
+def test_as_at_that_keeps_matches_gives_no_warning(results_file):
+    assert run([str(results_file), "--as-at", "1974-09-28"])[2] == ""
+
+
+def test_no_as_at_on_header_only_input_gives_no_warning():
+    code, out, err = run([], "date,home_team,home_goals,away_team,away_goals\n")
+    assert (code, err) == (EXIT_OK, "")
+    assert out == "Pos,Team,P,W,D,L,GF,GA,GAvg,Pts\n"
 
 
 def test_help_goes_to_stdout_and_exits_zero():
@@ -125,6 +143,59 @@ def test_input_that_is_a_folder_exits_2(tmp_path):
     code, out, err = run([str(tmp_path)])
     assert (code, out) == (EXIT_BAD_ARGS, "")
     assert "cannot read input file" in err
+
+
+# --- no input from a terminal: exit 2 -------------------------------------
+
+class TerminalStdin(io.BytesIO):
+    def isatty(self):
+        return True
+
+
+def run_with_terminal(argv):
+    out, err = io.StringIO(), io.StringIO()
+    code = main(argv, stdin=TerminalStdin(RESULTS.encode("utf-8")), stdout=out, stderr=err)
+    return code, out.getvalue(), err.getvalue()
+
+
+def test_no_input_on_a_terminal_prints_usage_and_exits_2():
+    code, out, err = run_with_terminal([])
+    assert (code, out) == (EXIT_BAD_ARGS, "")
+    assert err.startswith("usage: league")
+    assert "no input" in err
+
+
+def test_no_input_on_a_terminal_with_other_options_still_exits_2():
+    assert run_with_terminal(["--as-at", "1974-09-28"])[0] == EXIT_BAD_ARGS
+
+
+def test_explicit_dash_still_reads_a_terminal():
+    assert run_with_terminal(["-"]) == (EXIT_OK, TABLE_ALL, "")
+
+
+def test_file_input_ignores_a_terminal_stdin(results_file):
+    assert run_with_terminal([str(results_file)]) == (EXIT_OK, TABLE_ALL, "")
+
+
+# --- unexpected errors: exit 3 --------------------------------------------
+
+def test_unexpected_error_exits_3_with_one_line_message(monkeypatch):
+    def broken(*args, **kwargs):
+        raise RuntimeError("something broke")
+
+    monkeypatch.setattr(cli, "league_table", broken)
+    code, out, err = run([], RESULTS)
+    assert (code, out) == (EXIT_INTERNAL, "")
+    assert err == "league: internal error: RuntimeError: something broke\n"
+
+
+def test_unexpected_error_never_writes_output_file(monkeypatch, results_file, tmp_path):
+    monkeypatch.setattr(cli, "write_table", lambda *a: 1 / 0)
+    target = tmp_path / "table.csv"
+    code, _, err = run([str(results_file), "-o", str(target)])
+    assert code == EXIT_INTERNAL
+    assert "ZeroDivisionError" in err and err.count("\n") == 1
+    assert not target.exists()
 
 
 # --- real process: `python -m league` -------------------------------------
